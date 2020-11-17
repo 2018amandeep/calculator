@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculatow using JS</title>
+	<style type="text/css">
+		body{
+			background-image: url(calc.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#clear{
+			width:136px;
+		}
+		.formstyle{
+			height: 480px;
+			width: 320px;
+			border: 2px solid black;
+			margin: 0 auto;
+			border-radius: 10px;
+			background-color: #eaedef;
+			position: relative;
+
+		}
+		#textarea{
+			width: 295px;
+			height: 120px;
+			border-radius: 20px;
+			background-color: #d5d5d5;
+			text-align: right;
+			margin: 10px 12px;
+		}
+		/*input{
+			width: 42px;
+			border-radius: 100%;
+			background-color: cyan;
+		}*/
+		.operator, .number{
+			width: 50px;
+			height: 50px;
+			margin: 15px;
+			float: left;
+			border-radius: 50%;
+			border-width: 0;
+			font-size: 15px;
+			font-weight: bold;
+			cursor: pointer; 
+		}
+		.number{
+			background-color: #d5d5d5;
+		}
+		.operator:actve, .number:active{
+			font-size: 20px;
+		}
+		.operator:focus, .number:focus{
+			outline: 0;;
+		}
+		input:nth-child(5){
+			font-size: 20px;
+			background-color: #20b2aa;
+		}
+		input:nth-child(9){
+			font-size: 20px;
+			background-color: #ffa500;
+		}
+		input:nth-child(13){
+			font-size: 20px;
+			background-color: #f08880;
+		}
+		input:nth-child(16){
+			font-size: 20px;
+			background-color: #7d93e0;
+		}
+		input:nth-child(17){
+			font-size: 20px;
+			background-color: #9477af;
+		}
+	</style>
+</head>
+<body >
+	<div class="formstyle">
+		<form name="form">
+			<input type="text" name="answer" id="textarea">
+			<input type="button" value="1" onclick="form.answer.value += '1'  " class="number">
+			<input type="button" value="2" onclick="form.answer.value += '2'  " class="number">
+			<input type="button" value="3" onclick="form.answer.value += '3'  " class="number">
+			<input type="button" value="+" onclick="form.answer.value += '+'  " class="operator">
+			<input type="button" value="4" onclick="form.answer.value += '4'  " class="number">
+			<input type="button" value="5" onclick="form.answer.value += '5'  " class="number">
+			<input type="button" value="6" onclick="form.answer.value += '6'  " class="number">
+			<input type="button" value="-" onclick="form.answer.value += '-'  " class="operator">
+			<input type="button" value="7" onclick="form.answer.value += '7'  " class="number">
+			<input type="button" value="8" onclick="form.answer.value += '8'  " class="number">
+			<input type="button" value="9" onclick="form.answer.value += '9'  " class="number">
+			<input type="button" value="*" onclick="form.answer.value += '*'  " class="operator">
+			<input type="button" value="clear" onclick="form.answer.value = ''  "  class="number">
+			<input type="button" value="0" onclick="form.answer.value += '0'  " class="number">
+			<input type="button" value="=" onclick="form.answer.value = eval(form.answer.value)  " class="operator">
+			<input type="button" value="/" onclick="form.answer.value += '/'  " class="operator">
+
+		</form>
+	</div>
+</body>
+</html>
